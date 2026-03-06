@@ -1,0 +1,38 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-cn'
+title = 'Meta Synapse Rambling'
+theme = 'PaperMod'
+
+# 定义网站作者信息（解决报错的核心）
+[author]
+    name = "零熵"
+
+# PaperMod 主题专属配置参数
+[params]
+    author = "零熵"
+    defaultTheme = "auto" # 自动跟随系统切换深色/浅色模式
+    
+    # 开启归档和标签功能
+    ShowPostNavLinks = true
+    ShowReadingTime = true
+    ShowBreadCrumbs = true
+
+    # 核心隔离代码：告诉首页只显示 content/posts 文件夹里的内容
+    mainSections = ["posts"]
+
+# 配置顶部导航栏菜单
+[[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+
+[[menu.main]]
+    name = "日记"
+    url = "/diary/"
+    weight = 20
+
+# 新增关于作者入口
+[[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 30
